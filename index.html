@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YogiNagar Na Maharaja</title>
+<title>yoginagarnamaharaja</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="Yogi Nagar Na Maharaja.png" type="image/png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
@@ -22,20 +24,67 @@ color:#fff;
 }
 
 header{
-height:100vh;
+min-height:100vh;
 background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),
-url("ganpati.jpg") center/cover;
+url("2_NR0050.jpg") center/cover;
+padding:30px 8%;
+}
+
+header .header-top{
 display:flex;
-justify-content:center;
+justify-content:space-between;
 align-items:center;
-text-align:center;
+flex-wrap:wrap;
+gap:20px;
+margin-bottom:40px;
+}
+
+header .site-brand{
+display:flex;
+align-items:center;
+gap:12px;
+color:#fff;
+text-decoration:none;
+font-size:26px;
+font-weight:700;
+}
+
+header .site-brand img{
+width:54px;
+height:54px;
+object-fit:cover;
+border-radius:50%;
+border:2px solid rgba(255,255,255,.35);
+box-shadow:0 0 18px rgba(255,215,0,.2);
+}
+
+header .nav-links{
+display:flex;
+gap:24px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+header .nav-links a{
+color:#fff;
+text-decoration:none;
+font-weight:600;
+font-size:16px;
+padding:10px 14px;
+border-radius:999px;
+transition:.3s;
+}
+
+header .nav-links a:hover,
+header .nav-links a.active{
+background:rgba(255,215,0,.15);
+color:#FFD700;
 }
 
 header .lang-board{
 display:flex;
-justify-content:center;
+justify-content:flex-end;
 gap:12px;
-margin-bottom:30px;
 flex-wrap:wrap;
 }
 
@@ -56,11 +105,21 @@ color:#000;
 border-color:#FFD700;
 }
 
+header .header-content{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+min-height:calc(100vh - 170px);
+gap:20px;
+}
+
 header img{
 width:220px;
 max-width:90%;
 display:block;
-margin:0 auto 25px;
+margin:0 auto;
 border-radius:20px;
 box-shadow:0 0 30px rgba(255,215,0,.25);
 }
@@ -73,6 +132,13 @@ color:#FFD700;
 header p{
 font-size:20px;
 margin-top:15px;
+}
+
+.location{
+color:#fff;
+opacity:.8;
+font-size:16px;
+margin-top:10px;
 }
 
 .btn{
@@ -97,6 +163,15 @@ margin-bottom:40px;
 color:#FFD700;
 }
 
+.subtitle{
+text-align:center;
+color:#fff;
+font-size:18px;
+margin-top:-20px;
+margin-bottom:30px;
+opacity:.8;
+}
+
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -104,16 +179,16 @@ gap:25px;
 }
 
 .card{
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(15px);
-border-radius:20px;
+background:transparent;
+backdrop-filter:none;
+border-radius:0;
 padding:25px;
-border:1px solid rgba(255,255,255,.15);
+border:none;
 transition:.4s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:none;
 }
 
 .card h2{
@@ -121,30 +196,170 @@ color:#FFD700;
 margin-bottom:10px;
 }
 
-.gallery{
+.photo-gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
+align-items:start;
 }
 
-.gallery img{
+.photo-card{
+background:transparent;
+backdrop-filter:none;
+border-radius:0;
+overflow:hidden;
+border:none;
+transition:none;
+}
+
+.photo-card:hover{
+transform:none;
+}
+
+.photo-card img{
+width:100%;
+height:240px;
+object-fit:cover;
+display:block;
+}
+
+.photo-card-content{
+padding:18px;
+}
+
+.gallery-page-two{
+display:grid;
+grid-template-columns:1.3fr .7fr;
+gap:25px;
+align-items:start;
+max-width:1200px;
+margin:0 auto;
+}
+
+.gallery-feature{
+position:relative;
+overflow:hidden;
+border-radius:24px;
+height:520px;
+}
+
+.gallery-feature img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.gallery-feature-text{
+position:absolute;
+bottom:24px;
+left:24px;
+right:24px;
+background:rgba(0,0,0,.6);
+padding:22px;
+border-radius:20px;
+color:#fff;
+}
+
+.gallery-preview{
+display:grid;
+gap:20px;
+}
+
+.preview-card{
+overflow:hidden;
+border-radius:20px;
+}
+
+.preview-card img{
 width:100%;
 height:220px;
 object-fit:cover;
-border-radius:18px;
-}
-
-.video-wrapper{
-max-width:900px;
-margin:0 auto;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 0 40px rgba(255,215,0,.15);
-}
-
-.video-wrapper video{
-width:100%;
 display:block;
+}
+
+.video-gallery{
+display:grid;
+grid-template-columns:1.5fr 1fr;
+gap:25px;
+align-items:start;
+max-width:1200px;
+margin:0 auto;
+}
+
+.video-gallery .video-featured,
+.video-gallery .video-list{
+background:transparent;
+backdrop-filter:none;
+border-radius:0;
+border:none;
+}
+
+.video-featured{
+position:relative;
+padding-bottom:56.25%;
+height:0;
+overflow:hidden;
+border-radius:24px;
+}
+
+.video-featured video{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+}
+
+.video-list{
+display:grid;
+gap:18px;
+padding:24px;
+}
+
+.video-card{
+position:relative;
+overflow:hidden;
+border-radius:18px;
+background:#111;
+aspect-ratio:16 / 9;
+}
+
+.video-card::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(180deg,transparent,rgba(0,0,0,.65));
+}
+
+.video-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.video-card h3{
+position:absolute;
+bottom:18px;
+left:18px;
+right:18px;
+margin:0;
+color:#fff;
+font-size:18px;
+z-index:1;
+}
+
+.video-card a{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+text-indent:-9999px;
 }
 
 table{
@@ -170,6 +385,23 @@ text-align:center;
 background:#111;
 }
 
+.social-icons{
+display:flex;
+justify-content:center;
+gap:18px;
+margin-top:18px;
+}
+
+.social-icons a{
+color:#fff;
+font-size:22px;
+transition:.3s;
+}
+
+.social-icons a:hover{
+color:#FFD700;
+}
+
 </style>
 
 </head>
@@ -178,7 +410,18 @@ background:#111;
 
 <header>
 
-<div>
+<div class="header-top">
+
+<a href="#kharcho" class="site-brand">
+<img src="Yogi Nagar Na Maharaja.png" alt="Yogi Nagar Na Maharaja Logo">
+<span>Yogi Nagar Na Maharaja</span>
+</a>
+
+</div>
+
+</div>
+
+<div class="header-content">
 
 <div class="lang-board">
 <button class="active" data-lang="english">English</button>
@@ -186,11 +429,11 @@ background:#111;
 <button data-lang="hindi">हिंदी</button>
 </div>
 
-<img src="Yogi Nagar Na Maharaja.png" alt="Yogi Nagar Na Maharaja Logo">
-
 <h1 data-i18n="headerTitle">yoginagarnamaharaja</h1>
 
 <p data-i18n="headerSubtitle">Welcome to Our Celebration</p>
+
+<p class="location">Location: Vadodara, India</p>
 
 <a href="#kharcho" class="btn" data-i18n="exploreBtn">Explore</a>
 
@@ -234,15 +477,89 @@ background:#111;
 
 <section>
 
-<h1 class="title" data-i18n="photography">Photography</h1>
+<h1 class="title" data-i18n="photoGallery">Photo Gallery</h1>
 
-<div class="gallery">
+<div class="photo-gallery">
 
-<img src="photo1.jpg">
+<div class="photo-card">
+<img src="2_NR0068.JPG" alt="Festival photo 1">
+</div>
 
-<img src="photo2.jpg">
+<div class="photo-card">
+<img src="2_NR0163.JPG" alt="Festival photo 2">
+</div>
 
-<img src="photo3.jpg">
+<div class="photo-card">
+<img src="2_NR0178.JPG" alt="Festival photo 3">
+</div>
+
+<div class="photo-card">
+<img src="2_NR0190.JPG" alt="Festival photo 4">
+</div>
+
+<div class="photo-card">
+<img src="2_NR0199.JPG" alt="Festival photo 5">
+</div>
+
+<div class="photo-card">
+<img src="2_NR0219.JPG" alt="Festival photo 6">
+</div>
+
+<div class="photo-card">
+<img src="2_NR0228.JPG" alt="Festival photo 7">
+</div>
+
+<div class="photo-card">
+<img src="2_NR0259.JPG" alt="Festival photo 8">
+</div>
+
+<div class="photo-card">
+<img src="2_NR0285.JPG" alt="Festival photo 9">
+</div>
+
+<div class="photo-card">
+<img src="2_NR0325.JPG" alt="Festival photo 10">
+</div>
+
+<div class="photo-card">
+<img src="2_NR0329.JPG" alt="Festival photo 11">
+</div>
+
+<div class="photo-card">
+<img src="2_NR0345.JPG" alt="Festival photo 12">
+</div>
+
+</div>
+
+</section>
+
+<h1 class="title">2025 Ganesh Mohotsav</h1>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>Grand Celebration</h2>
+
+<p>Relive the vibrant 2025 Ganesh Mohotsav with community gatherings, devotional music, and cultural performances.</p>
+
+</div>
+
+<div class="card">
+
+<h2>Devotional Highlights</h2>
+
+<p>Highlights include morning aaratis, floral decorations, and heartfelt prayers from the festival.</p>
+
+</div>
+
+<div class="card">
+
+<h2>Festival Memories</h2>
+
+<p>Capturing the joyful atmosphere, the 2025 celebrations brought together family and devotees in unity.</p>
+
+</div>
 
 </div>
 
@@ -284,44 +601,26 @@ background:#111;
 
 <section>
 
-<h1 class="title" data-i18n="festivalVideo">Festival Video</h1>
+<h1 class="title" data-i18n="festivalVideo">Video</h1>
 
-<div class="video-wrapper">
+<div class="video-gallery">
+
+<div class="video-featured">
 <video controls poster="video-poster.jpg">
-<source src="festival-video.mp4" type="video/mp4">
+<source src="Ganpati 9.mp4" type="video/mp4">
+<h3>Festival Highlight</h3>
 Your browser does not support the video tag.
 </video>
 </div>
 
-</section>
-
-<section>
-
-<h1 class="title" data-i18n="festivalEvents">Festival Events</h1>
-
-<div class="cards">
-
-<div class="card">
-
-<h2 data-i18n="ganeshSthapana">Ganesh Sthapana</h2>
-
-<p data-i18n="ganeshDesc">Morning Aarti & Decoration</p>
-
+<div class="video-featured">
+<video controls poster="video-poster.jpg">
+<source src="Ganpati 2025.mp4" type="video/mp4">
+<h3>Festival Highlight</h3>
+Your browser does not support the video tag.
+</video>
 </div>
 
-<div class="card">
-
-<h2 data-i18n="bhajanNight">Bhajan Night</h2>
-
-<p data-i18n="bhajanDesc">Live Music Program</p>
-
-</div>
-
-<div class="card">
-
-<h2 data-i18n="visarjan">Visarjan</h2>
-
-<p data-i18n="visarjanDesc">Grand Procession</p>
 
 </div>
 
@@ -331,16 +630,20 @@ Your browser does not support the video tag.
 
 <footer>
 
-<h3 data-i18n="footerTitle">yoginagarnamaharaja Ganpati Festival 2026</h3>
+<div class="social-icons">
+<a href="https://www.instagram.com/yoginagar_na_maharaja_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://www.facebook.com/share/g/1CvLJXv7p5/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+<a href="https://www.youtube.com/@yoginagarmaharaja" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+</div>
 
-<p data-i18n="footerDesc">Photography • Videography • Daily Updates • Kharcho</p>
+<h3 data-i18n="footerTitle">@yoginagarnamaharaja Ganpati Festival 2026</h3>
 
 </footer>
 
 <script>
 const translations = {
   english: {
-    headerTitle: '🙏 yoginagarnamaharaja 🙏',
+    headerTitle: ' yoginagarnamaharaja ',
     headerSubtitle: 'Welcome to Our Celebration',
     exploreBtn: 'Explore',
     dailyKharcho: 'Daily Kharcho',
@@ -354,6 +657,7 @@ const translations = {
     day3: 'Day 3',
     soundSystem: 'Sound System',
     photography: 'Photography',
+    photoGallery: 'Photo Gallery',
     videography: 'Videography',
     cinematicHighlight: 'Cinematic Highlight',
     cinematicDesc: '4K Festival Highlights',
@@ -361,7 +665,7 @@ const translations = {
     droneDesc: 'Beautiful Aerial Shots',
     reels: 'Reels',
     reelsDesc: 'Instagram Viral Reels',
-    festivalVideo: 'Festival Video',
+    festivalVideo: 'Festival Video Gallery',
     festivalEvents: 'Festival Events',
     ganeshSthapana: 'Ganesh Sthapana',
     ganeshDesc: 'Morning Aarti & Decoration',
@@ -373,7 +677,7 @@ const translations = {
     footerDesc: 'Photography • Videography • Daily Updates • Kharcho'
   },
   gujarati: {
-    headerTitle: '🙏 યોગીનગર ના મહારાજા 🙏',
+    headerTitle: 'યોગીનગર ના મહારાજા',
     headerSubtitle: 'અમારા ઉત્સવમાં આપનું સ્વાગત છે',
     exploreBtn: 'ખોજો',
     dailyKharcho: 'દૈરિક ખર્ચો',
@@ -387,6 +691,7 @@ const translations = {
     day3: 'દિવસ 3',
     soundSystem: 'સાઉન્ડ સિસ્ટમ',
     photography: 'ફોટોગ્રાફી',
+    photoGallery: 'ફોટો ગેલેરી',
     videography: 'વિડિઓગ્રાફી',
     cinematicHighlight: 'સિનેમેટિક હાઇલાઇટ',
     cinematicDesc: '4K ઉત્સવ હાઇલાઇટ્સ',
@@ -406,7 +711,7 @@ const translations = {
     footerDesc: 'ફોટોગ્રાફી • વિડિઓગ્રાફી • દૈનિક અપડેટ્સ • ખર્ચો'
   },
   hindi: {
-    headerTitle: '🙏 योगीनगर ना महाराजा 🙏',
+    headerTitle: 'योगीनगर ना महाराजा',
     headerSubtitle: 'हमारे उत्सव में आपका स्वागत है',
     exploreBtn: 'खोजें',
     dailyKharcho: 'दैनिक खर्चा',
@@ -420,6 +725,7 @@ const translations = {
     day3: 'दिन 3',
     soundSystem: 'साउंड सिस्टम',
     photography: 'फोटोग्राफी',
+    photoGallery: 'फोटो गैलरी',
     videography: 'विडियोग्राफी',
     cinematicHighlight: 'सिनेमैटिक हाइलाइट',
     cinematicDesc: '4K उत्सव हाइलाइट्स',

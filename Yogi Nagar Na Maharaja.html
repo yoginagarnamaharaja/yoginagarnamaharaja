@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YogiNagar Na Maharaja</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0b0b0b;
+color:#fff;
+}
+
+header{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),
+url("ganpati.jpg") center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+header .lang-board{
+display:flex;
+justify-content:center;
+gap:12px;
+margin-bottom:30px;
+flex-wrap:wrap;
+}
+
+header .lang-board button{
+padding:10px 18px;
+border:1px solid rgba(255,255,255,.35);
+background:rgba(255,255,255,.08);
+color:#fff;
+border-radius:999px;
+cursor:pointer;
+transition:.3s;
+}
+
+header .lang-board button:hover,
+header .lang-board button.active{
+background:#FFD700;
+color:#000;
+border-color:#FFD700;
+}
+
+header img{
+width:220px;
+max-width:90%;
+display:block;
+margin:0 auto 25px;
+border-radius:20px;
+box-shadow:0 0 30px rgba(255,215,0,.25);
+}
+
+header h1{
+font-size:60px;
+color:#FFD700;
+}
+
+header p{
+font-size:20px;
+margin-top:15px;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 35px;
+background:#FFD700;
+color:#000;
+border-radius:40px;
+font-weight:bold;
+text-decoration:none;
+}
+
+section{
+padding:70px 10%;
+}
+
+.title{
+text-align:center;
+font-size:38px;
+margin-bottom:40px;
+color:#FFD700;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+border-radius:20px;
+padding:25px;
+border:1px solid rgba(255,255,255,.15);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h2{
+color:#FFD700;
+margin-bottom:10px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:18px;
+}
+
+.video-wrapper{
+max-width:900px;
+margin:0 auto;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 0 40px rgba(255,215,0,.15);
+}
+
+.video-wrapper video{
+width:100%;
+display:block;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#FFD700;
+color:#000;
+padding:15px;
+}
+
+td{
+padding:15px;
+text-align:center;
+border-bottom:1px solid #333;
+}
+
+footer{
+padding:30px;
+text-align:center;
+background:#111;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div>
+
+<div class="lang-board">
+<button class="active" data-lang="english">English</button>
+<button data-lang="gujarati">ગુજરાતી</button>
+<button data-lang="hindi">हिंदी</button>
+</div>
+
+<img src="Yogi Nagar Na Maharaja.png" alt="Yogi Nagar Na Maharaja Logo">
+
+<h1 data-i18n="headerTitle">yoginagarnamaharaja</h1>
+
+<p data-i18n="headerSubtitle">Welcome to Our Celebration</p>
+
+<a href="#kharcho" class="btn" data-i18n="exploreBtn">Explore</a>
+
+</div>
+
+</header>
+
+<section id="kharcho">
+
+<h1 class="title" data-i18n="dailyKharcho">Daily Kharcho</h1>
+
+<table>
+
+<tr>
+<th data-i18n="tableDate">Date</th>
+<th data-i18n="tableExpense">Expense</th>
+<th data-i18n="tableAmount">Amount</th>
+</tr>
+
+<tr>
+<td data-i18n="day1">Day 1</td>
+<td data-i18n="decoration">Decoration</td>
+<td>₹15,000</td>
+</tr>
+
+<tr>
+<td data-i18n="day2">Day 2</td>
+<td data-i18n="prasad">Prasad</td>
+<td>₹8,500</td>
+</tr>
+
+<tr>
+<td data-i18n="day3">Day 3</td>
+<td data-i18n="soundSystem">Sound System</td>
+<td>₹12,000</td>
+</tr>
+
+</table>
+
+</section>
+
+<section>
+
+<h1 class="title" data-i18n="photography">Photography</h1>
+
+<div class="gallery">
+
+<img src="photo1.jpg">
+
+<img src="photo2.jpg">
+
+<img src="photo3.jpg">
+
+</div>
+
+</section>
+
+<section>
+
+<h1 class="title" data-i18n="videography">Videography</h1>
+
+<div class="cards">
+
+<div class="card">
+
+<h2 data-i18n="cinematicHighlight">Cinematic Highlight</h2>
+
+<p data-i18n="cinematicDesc">4K Festival Highlights</p>
+
+</div>
+
+<div class="card">
+
+<h2 data-i18n="droneCoverage">Drone Coverage</h2>
+
+<p data-i18n="droneDesc">Beautiful Aerial Shots</p>
+
+</div>
+
+<div class="card">
+
+<h2 data-i18n="reels">Reels</h2>
+
+<p data-i18n="reelsDesc">Instagram Viral Reels</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h1 class="title" data-i18n="festivalVideo">Festival Video</h1>
+
+<div class="video-wrapper">
+<video controls poster="video-poster.jpg">
+<source src="festival-video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+</section>
+
+<section>
+
+<h1 class="title" data-i18n="festivalEvents">Festival Events</h1>
+
+<div class="cards">
+
+<div class="card">
+
+<h2 data-i18n="ganeshSthapana">Ganesh Sthapana</h2>
+
+<p data-i18n="ganeshDesc">Morning Aarti & Decoration</p>
+
+</div>
+
+<div class="card">
+
+<h2 data-i18n="bhajanNight">Bhajan Night</h2>
+
+<p data-i18n="bhajanDesc">Live Music Program</p>
+
+</div>
+
+<div class="card">
+
+<h2 data-i18n="visarjan">Visarjan</h2>
+
+<p data-i18n="visarjanDesc">Grand Procession</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3 data-i18n="footerTitle">yoginagarnamaharaja Ganpati Festival 2026</h3>
+
+<p data-i18n="footerDesc">Photography • Videography • Daily Updates • Kharcho</p>
+
+</footer>
+
+<script>
+const translations = {
+  english: {
+    headerTitle: '🙏 yoginagarnamaharaja 🙏',
+    headerSubtitle: 'Welcome to Our Celebration',
+    exploreBtn: 'Explore',
+    dailyKharcho: 'Daily Kharcho',
+    tableDate: 'Date',
+    tableExpense: 'Expense',
+    tableAmount: 'Amount',
+    day1: 'Day 1',
+    decoration: 'Decoration',
+    day2: 'Day 2',
+    prasad: 'Prasad',
+    day3: 'Day 3',
+    soundSystem: 'Sound System',
+    photography: 'Photography',
+    videography: 'Videography',
+    cinematicHighlight: 'Cinematic Highlight',
+    cinematicDesc: '4K Festival Highlights',
+    droneCoverage: 'Drone Coverage',
+    droneDesc: 'Beautiful Aerial Shots',
+    reels: 'Reels',
+    reelsDesc: 'Instagram Viral Reels',
+    festivalVideo: 'Festival Video',
+    festivalEvents: 'Festival Events',
+    ganeshSthapana: 'Ganesh Sthapana',
+    ganeshDesc: 'Morning Aarti & Decoration',
+    bhajanNight: 'Bhajan Night',
+    bhajanDesc: 'Live Music Program',
+    visarjan: 'Visarjan',
+    visarjanDesc: 'Grand Procession',
+    footerTitle: 'yoginagarnamaharaja Ganpati Festival 2026',
+    footerDesc: 'Photography • Videography • Daily Updates • Kharcho'
+  },
+  gujarati: {
+    headerTitle: '🙏 યોગીનગર ના મહારાજા 🙏',
+    headerSubtitle: 'અમારા ઉત્સવમાં આપનું સ્વાગત છે',
+    exploreBtn: 'ખોજો',
+    dailyKharcho: 'દૈરિક ખર્ચો',
+    tableDate: 'તારીખ',
+    tableExpense: 'ખર્ચ',
+    tableAmount: 'રકમ',
+    day1: 'દિવસ 1',
+    decoration: 'સજાવટ',
+    day2: 'દિવસ 2',
+    prasad: 'પ્રસાદ',
+    day3: 'દિવસ 3',
+    soundSystem: 'સાઉન્ડ સિસ્ટમ',
+    photography: 'ફોટોગ્રાફી',
+    videography: 'વિડિઓગ્રાફી',
+    cinematicHighlight: 'સિનેમેટિક હાઇલાઇટ',
+    cinematicDesc: '4K ઉત્સવ હાઇલાઇટ્સ',
+    droneCoverage: 'ડ્રોન કવરેજ',
+    droneDesc: 'સુંદર હવાઈ શોટ્સ',
+    reels: 'રીલ્સ',
+    reelsDesc: 'ઈન્સ્ટાગ્રામ વાયરલ રીલ્સ',
+    festivalVideo: 'ઉત્સવ વિડિઓ',
+    festivalEvents: 'ઉત્સવ ઇવેન્ટ્સ',
+    ganeshSthapana: 'ગણેશ સ્થાપના',
+    ganeshDesc: 'સવારની આરતી અને સજાવટ',
+    bhajanNight: 'ભજન રાત્રિ',
+    bhajanDesc: 'લાઇવ મ્યુઝિક પ્રોગ્રામ',
+    visarjan: 'વિસારજન',
+    visarjanDesc: 'ભવ્ય જુલોસ',
+    footerTitle: 'યોગી નગર ના મહારાજા ગણપતિ ઉત્સવ 2026',
+    footerDesc: 'ફોટોગ્રાફી • વિડિઓગ્રાફી • દૈનિક અપડેટ્સ • ખર્ચો'
+  },
+  hindi: {
+    headerTitle: '🙏 योगीनगर ना महाराजा 🙏',
+    headerSubtitle: 'हमारे उत्सव में आपका स्वागत है',
+    exploreBtn: 'खोजें',
+    dailyKharcho: 'दैनिक खर्चा',
+    tableDate: 'तारीख',
+    tableExpense: 'खर्च',
+    tableAmount: 'राशि',
+    day1: 'दिन 1',
+    decoration: 'सजावट',
+    day2: 'दिन 2',
+    prasad: 'प्रसाद',
+    day3: 'दिन 3',
+    soundSystem: 'साउंड सिस्टम',
+    photography: 'फोटोग्राफी',
+    videography: 'विडियोग्राफी',
+    cinematicHighlight: 'सिनेमैटिक हाइलाइट',
+    cinematicDesc: '4K उत्सव हाइलाइट्स',
+    droneCoverage: 'ड्रोन कवरेज',
+    droneDesc: 'खूबसूरत हवाई शॉट्स',
+    reels: 'रील्स',
+    reelsDesc: 'इंस्टाग्राम वायरल रील्स',
+    festivalVideo: 'उत्सव वीडियो',
+    festivalEvents: 'उत्सव कार्यक्रम',
+    ganeshSthapana: 'गणेश स्थापना',
+    ganeshDesc: 'सुबह आरती और सजावट',
+    bhajanNight: 'भजन रात',
+    bhajanDesc: 'लाइव म्यूज़िक प्रोग्राम',
+    visarjan: 'विसर्जन',
+    visarjanDesc: 'भव्य जुलूस',
+    footerTitle: 'योगी नगर ना महाराज गणपति उत्सव 2026',
+    footerDesc: 'फोटोग्राफी • वीडियोग्राफी • दैनिक अपडेट्स • खर्चा'
+  }
+};
+
+function setLanguage(lang) {
+  document.documentElement.lang = lang === 'english' ? 'en' : lang === 'gujarati' ? 'gu' : 'hi';
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+}
+
+const buttons = document.querySelectorAll('.lang-board button');
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+    setLanguage(button.getAttribute('data-lang'));
+  });
+});
+
+setLanguage('english');
+</script>
+
+</body>
+</html>
